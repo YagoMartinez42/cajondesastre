@@ -6,7 +6,7 @@
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:28:52 by samartin          #+#    #+#             */
-/*   Updated: 2023/01/18 11:45:43 by samartin         ###   ########.fr       */
+/*   Updated: 2023/01/18 12:03:41 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	is_pow2(unsigned int n)
 			if (n == 2)
 				return (1);
 			else
- 				return (0);
- 		}
- 		n = n >> 1;
- 	}
- 	return (0);
- }
+				return (0);
+		}
+		n = n >> 1;
+	}
+	return (0);
+}
