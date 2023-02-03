@@ -1,18 +1,60 @@
 #include "lists.h"
+#include <stdio.h>
+
+int ascending(int a, int b)
+{
+	return (a <= b);
+}
+int int_equals(void* a, void* b)
+{
+	if (*(int*)a == *(int*)b)
+		return (0);
+	return (1);
+}
 
 int main(void)
 {
 	t_list* test_list;
 	t_list* node;
-	int content[20] = {5,5,2,6,78,23,5,72,59,10,1,-2,-2,-9,12,-25,-90,99,-7,33};
+	int len;
 	int i = 1;
+	int* n1 = NULL;
+	int n2 = 5;
 
-	test_list = ft_listnew(content);
-
-	while (i < 20)
+	len = (random() % 126) + 2;
+	n1 = malloc(sizeof(int));
+	*n1 = (random() % 512) - 128;
+	test_list = ft_lstnew(n1);
+	while (i < len)
 	{
-		node = ft_lstnew(content + i)
+		n1 = malloc(sizeof(int));
+		*n1 = (random() % 512) - 128;
+		node = ft_lstnew(n1);
 		ft_lstadd_back(&test_list, node);
+		i++;
 	}
+	node = test_list;
+	while (node != NULL)
+	{
+		printf("%i ", *(int*)(node->content));
+		node = node->next;
+	}
+	printf("\n");
+	ft_lstremove_if(&test_list, (void *)&n2, int_equals);
+	node = test_list;
+	while (node != NULL)
+	{
+		printf("%i ", *(int*)(node->content));
+		node = node->next;
+	}
+	printf("\n");
+	test_list = ft_lstsort(test_list, ascending);
+	node = test_list;
+	while (node != NULL)
+	{
+		printf("%i ", *(int*)(node->content));
+		node = node->next;
+	}
+	printf("\n");
 	return 0;
 }
