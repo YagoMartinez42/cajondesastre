@@ -6,12 +6,12 @@
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:17:54 by samartin          #+#    #+#             */
-/*   Updated: 2023/02/16 13:09:58 by samartin         ###   ########.fr       */
+/*   Updated: 2023/03/13 14:39:49 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "mlx.h"
+#include <mlx.h>
 
 typedef struct s_data
 {
