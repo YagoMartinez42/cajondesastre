@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <time.h>
 
 int ascending(int a, int b)
 {
@@ -21,14 +22,15 @@ int main(void)
 	int* n1 = NULL;
 	int n2 = 5;
 
-	len = (random() % 126) + 2;
+	srand(time(NULL));
+	len = (rand() % 126) + 2;
 	n1 = malloc(sizeof(int));
-	*n1 = (random() % 512) - 128;
+	*n1 = (rand() % 512) - 128;
 	test_list = ft_lstnew(n1);
 	while (i < len)
 	{
 		n1 = malloc(sizeof(int));
-		*n1 = (random() % 512) - 128;
+		*n1 = (rand() % 512) - 128;
 		node = ft_lstnew(n1);
 		ft_lstadd_back(&test_list, node);
 		i++;
