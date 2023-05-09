@@ -6,7 +6,7 @@
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:17:54 by samartin          #+#    #+#             */
-/*   Updated: 2023/03/13 14:39:49 by samartin         ###   ########.fr       */
+/*   Updated: 2023/04/01 18:21:21 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ int	main(void)
 	img.img = mlx_new_image(vars.mlx, 800, 450);
 	img.addr = mlx_get_data_addr(img.img, &img.bits_per_pixel, &img.line_length,
 			&img.endian);
-	draw_gradient(&img, 800, 450, 0xBB4444, 0x44DD66);
+	draw_gradient(&img, 800, 450, 0xDDDD44, 0x44DD66);
 	mlx_put_image_to_window(vars.mlx, vars.win, img.img, 0, 0);
 	mlx_hook(vars.win, 17, 0L, close_by_x, &vars);
 	mlx_loop(vars.mlx);
